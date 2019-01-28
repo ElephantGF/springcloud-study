@@ -1,0 +1,3 @@
+1、3个服务模拟金丝雀发布，其中eurekaserver注册中心，gateway网关，user具体业务服务  
+2、user服务有两个配置文件application-node1.yml和application-node2.yml，模拟统一服务的多个实例。两者区别主要是端口号以及一个用于标识服务的mete-data.lanucher,网关也是根据这个值来区分转发到具体哪个服务。  
+3、主要关注gateway服务的preFilter的run方法，这里通过一个权重随机算法，来按照权重随机的将请求转发到两个不同的user服务。

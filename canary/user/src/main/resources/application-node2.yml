@@ -1,0 +1,15 @@
+server:
+  port: 8889
+eureka:
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      lancher: 2
+  client:
+    service-url:
+      defaultZone: http://localhost:11000/eureka/
+node: "instance 2"
+
+spring:
+  application:
+    name: user
